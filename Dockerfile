@@ -1,6 +1,6 @@
-FROM hub-dev.hexin.cn/jupyterhub/nvidia_cuda:py37-cuda100-ubuntu18.04-v2
+FROM 10jqkaaicubes/cuda:10.0-py3.7.9
 
-COPY ./ /home/jovyan/project-demo
+COPY ./ /home/jovyan/dcds_textmatching
 
-RUN cd /home/jovyan/project-demo  && \
+RUN cd /home/jovyan/dcds_textmatching  && \
     python -m pip install -r requirements.txt 

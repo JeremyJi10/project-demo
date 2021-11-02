@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-basepath=$(cd `dirname $0`; pwd)
+basepath=$(cd `./dcds_textmatching`; pwd)
 cd $basepath/../../
 source env.sh
 cd $basepath/../
@@ -9,6 +9,6 @@ cd $basepath
 
 
 # 以下是样例，你可以自定义修改
-python train.py \
-    --input_file_dir=$TRAIN_FILE_DIR \
-    --save_model_dir=$SAVE_MODEL_DIR
+python $bathpath/train/train.py \
+    --input_file_dir=$bathpath/train/train.tsv \
+    --save_model_dir=$bathpath/output/best_model.h5
